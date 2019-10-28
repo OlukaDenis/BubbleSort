@@ -16,12 +16,14 @@ end
 def bubble_sort_by(arr)
   len = arr.length
   swap = true
+  
   while swap
     swap = false
     (len - 1).times do |n|
-      next unless yield first > second
-      first, second = second, first
-      swap = true
+        my_values = yield(arr[n], arr[n+1])
+      next unless my_values > 0
+        arr[n], arr[n + 1] = arr[n + 1], arr[n]
+        swap = true
     end
   end
 
@@ -39,6 +41,4 @@ puts "\n"
 # Custom test, please specify a random number array
 # puts bubble_sort([insert your values here])
 
-bubble_sort_by(["hi","hello","hey"]) do | first , second |
-  first.length - second.length
-end
+print bubble_sort_by(%w[ruby is an interesting language to learn]) { | first , second | first.length - second.length}
