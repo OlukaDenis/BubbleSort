@@ -53,19 +53,19 @@ puts 'Starting string sort tests...'
 puts "\n"
 puts "\n"
 
-print (bubble_sort_by(%w[hi hello hey]) do |left, right|
+print(bubble_sort_by(%w[hi hello hey]) do |left, right|
   left.length - right.length
 end)
 puts "\n"
-print (bubble_sort_by(['I', 'Like', 'Web development', 'Everything works']) do |left, right|
+print(bubble_sort_by(['I', 'Like', 'Web development', 'Everything works']) do |left, right|
   left.length - right.length
 end)
 puts "\n"
-print (bubble_sort_by(%w[No Sorting Sort Yes Unsorted]) do |left, right|
+print(bubble_sort_by(%w[No Sorting Sort Yes Unsorted]) do |left, right|
   left.length - right.length
 end)
 puts "\n"
-print (bubble_sort_by(%w[Randomness hello Goodbye Techlead Promo]) do |left, right|
+print(bubble_sort_by(%w[Randomness hello Goodbye Techlead Promo]) do |left, right|
   left.length - right.length
 end)
 puts "\n"
